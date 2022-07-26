@@ -1,0 +1,40 @@
+.navbar {
+    width: 100%;
+    background-color: #4E5166;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FD2D01;
+}
+
+.navbar-picture {
+    width: 200px;
+    height: 50px;
+    background-image: url('../images/icon-post.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar a {
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.navbar a:hover {
+    color: #FD2D01;
+}
+
+.active-link {
+    display: flex;
+    align-items: center;
+}
+
+.icon-nav {
+    width: 1.6em;
+    height: 1.6em;
+}

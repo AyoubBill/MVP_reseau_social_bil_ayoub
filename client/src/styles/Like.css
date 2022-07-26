@@ -1,0 +1,16 @@
+.read-post-like {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.read-post-unlike {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
