@@ -110,13 +110,14 @@ const Home = () => {
                                         </div>
                                         <div className='read-post-icons'>
                                             <Like post={post} />
-                                            {post.userId === user.userId ? (
+                                            {post.userId === user.userId || user.roles === 'administrateur' ? (
                                                 <AiOutlineEdit
                                                     className='read-post-icon-login'
                                                     onClick={() => navigate(`/post/${post._id}`)}
                                                 />
                                             ) : (
-                                                <AiOutlineEdit className='read-post-icon' />
+                                                // <AiOutlineEdit className='read-post-icon' />
+                                                null
                                             )}
                                         </div>
                                     </div>
@@ -125,13 +126,14 @@ const Home = () => {
                                         <p>{post.description}</p>
                                         <div className='read-post-icons'>
                                             <Like post={post} />
-                                            {post.userId === user.userId ? (
+                                            {post.userId === user.userId || user.roles === 'administrateur' ? (
                                                 <AiOutlineEdit
                                                     className='read-post-icon-login'
                                                     onClick={() => navigate(`/post/${post._id}`)}
                                                 />
                                             ) : (
-                                                <AiOutlineEdit className='read-post-icon' />
+                                                // <AiOutlineEdit className='read-post-icon' />
+                                                null
                                             )}
                                         </div>
                                     </div>

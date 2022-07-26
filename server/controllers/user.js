@@ -9,7 +9,8 @@ exports.signup = (req, res, next) => {
                 username: req.body.username,
                 email: req.body.email,
                 password: hash,
-                likes: []
+                likes: [],
+                roles: req.body.roles
             });
             user.save()
                 .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
@@ -32,6 +33,7 @@ exports.login = (req, res, next) => {
                     res.status(200).json({
                         userId: user._id,
                         username: user.username,
+                        roles: user.roles,
                         token: jwt.sign(
                             { userId: user._id },
                             process.env.TOKEN_SECRET,
